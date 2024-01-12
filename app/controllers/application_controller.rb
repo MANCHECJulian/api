@@ -1,15 +1,8 @@
 class ApplicationController < ActionController::Base
-  def show
-    account_sid = 'AC26f2571fb85d1a3fde34fe2cd5f6e43b'
-    auth_token = '1f08aa0e57812449f0c5546fb487dad6'
-    @client = Twilio::REST::Client.new(account_sid, auth_token)
+	# Prevent CSRF attacks by raising an exception.
+	# For APIs, you may want to use :null_session instead.
 
-    message = @client.messages.create(
-      body: 'oui',
-      from: '+19123485710',
-      to: '+33787252660'
-    )
+	protect_from_forgery with: :exception
+	skip_before_action :verify_authenticity_token
 
-    puts message.sid
-  end
 end

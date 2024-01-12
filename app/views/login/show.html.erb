@@ -1,0 +1,5 @@
+<%= form_with url: "/user/connexion", method: :get do |form| %>
+  <%= form.text_field :email %>
+  <%= form.password_field :password %>
+  <%= form.submit 'Submit' %>
+<% end %>
