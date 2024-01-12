@@ -1,0 +1,13 @@
+version: "3"
+name: onrails
+services:
+  db-postgres:
+    image: postgres:latest
+    container_name: onrails-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: onrails
+    ports:
+      - 5435:5432

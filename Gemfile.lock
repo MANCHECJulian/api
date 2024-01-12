@@ -148,6 +148,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
+    pg (1.5.4)
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.4)
@@ -225,6 +226,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uuidtools (2.2.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -251,6 +253,7 @@ DEPENDENCIES
   error_highlight (>= 0.4.0)
   importmap-rails
   jbuilder
+  pg
   puma (>= 5.0)
   rails (~> 7.1.2)
   selenium-webdriver
@@ -259,6 +262,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  uuidtools
   web-console
 
 RUBY VERSION

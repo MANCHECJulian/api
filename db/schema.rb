@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_21_095135) do
-  create_table "users", id: false, force: :cascade do |t|
-    t.string "lastname"
-    t.string "firstname"
-    t.integer "age"
+ActiveRecord::Schema[7.1].define(version: 2024_01_12_100742) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
+  enable_extension "plpgsql"
+
+  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "username"
     t.string "email"
     t.string "password"
     t.datetime "created_at", null: false
