@@ -7,6 +7,10 @@ gem "rails", "~> 7.1.2"
 
 gem "view_component"
 
+gem 'pg'
+
+gem 'byebug'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

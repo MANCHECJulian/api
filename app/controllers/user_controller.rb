@@ -18,7 +18,7 @@ class UserController < ApplicationController
     if @user && @user.password == params["password"]
       redirect_to "/dashboard"
     else
-      redirect_to "/login"
+      redirect_to "/login?via=badrequest"
     end
   end
 

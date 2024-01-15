@@ -1,5 +1,14 @@
-<%= form_with url: "/user/connexion", method: :get do |form| %>
-  <%= form.text_field :email %>
-  <%= form.password_field :password %>
-  <%= form.submit 'Submit' %>
-<% end %>
+<div id="login_form">
+  <h1>Connection</h1>
+  <%= form_with url: "/user/connexion", method: :get do |form| %>
+    <%= form.text_field :email, class: "text-field", placeholder: "Email" %>
+    <%= form.password_field :password, class: "text-field", placeholder: "Mot de passe" %>
+    <%= form.submit 'Je me connecte', class: "button" %>
+  <% end %>
+  <% if params[:via] == "badrequest"%>
+    <div id="erreur">
+      <p>• Email ou mot de passe incorrecte.</p>
+    </div>
+  <% end %>
+  <p id="signin">Vous n'avez pas de compte ? <a href="#">Inscrivez-vous</a></p>
+</div>
