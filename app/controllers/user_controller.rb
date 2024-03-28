@@ -11,6 +11,7 @@ class UserController < ApplicationController
   end
 
   def login
+    @badrequest = true
   end
 
   def connexion
@@ -18,7 +19,7 @@ class UserController < ApplicationController
     if @user && @user.password == params["password"]
       redirect_to "/dashboard"
     else
-      redirect_to "/login?via=badrequest"
+      redirect_to "/user/login"
     end
   end
 

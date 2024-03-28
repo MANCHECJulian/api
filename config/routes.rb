@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # Users
   post "user", to: "user#create"
   get  "user/connexion", to: "user#connexion"
+  get  "user/login", to: "user#login"
 
   # Dashboard
   get "dashboard", to: "dashboard#show"
